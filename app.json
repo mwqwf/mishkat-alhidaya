@@ -1,0 +1,107 @@
+{
+  "expo": {
+    "name": "مشكاة الهداية",
+    "slug": "hudalibrary",
+    "version": "1.0.0",
+    "icon": "./assets/mainicon.png",
+    "userInterfaceStyle": "light",
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/4c0bf556-dc47-4c01-ab07-14fa998f4aae"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "web": {
+      "favicon": "./assets/mainicon.png"
+    },
+    "scheme": "hudalibrary",
+    "orientation": "portrait",
+    "platforms": ["android", "ios"],
+    "extra": {
+      "eas": {
+        "projectId": "4c0bf556-dc47-4c01-ab07-14fa998f4aae"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.mishkat.alhidaya",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"]
+      }
+    },
+    "android": {
+      "package": "com.mishkat.alhidaya",
+      "permissions": [
+        "FOREGROUND_SERVICE",
+        "WAKE_LOCK"
+      ],
+      "runtimeVersion": "1.0.0",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "hudalibrary"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        },
+        {
+          "action": "SEND",
+          "data": [
+            {
+              "mimeType": "*/*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        },
+        {
+          "action": "SEND_MULTIPLE",
+          "data": [
+            {
+              "mimeType": "*/*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "splash": {
+      "image": "./assets/mainicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 24,
+            "proguardMinifyEnabled": false,
+            "packagingOptions": {
+              "pickFirst": [
+                "**/libc++_shared.so",
+                "**/libjsc.so"
+              ]
+            }
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
